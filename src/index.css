@@ -11,3 +11,702 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  display: flex;
+  row-gap: 24px;
+  justify-content: space-between;
+  margin-left: 212px;
+  margin-right: 181px;
+  margin-bottom: 20px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.header img {
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-list li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons {
+  display: none;
+  gap: 32px;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-list li:hover {
+  color: #f4ce14;
+}
+
+.main {
+ position: relative;
+}
+
+.first-section {
+  background: #495e57;
+}
+
+.first-section-block {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 181px;
+  padding-left: 212px;
+}
+
+.first-section-text {
+  width: 300px;
+}
+
+.first-section-text h1 {
+  color: #f4ce14;
+  font-size: 40px;
+  margin-bottom: 0;
+  margin-top: 24px;
+}
+
+.first-section-text h3 {
+  color: white;
+  margin-top: 0;
+}
+
+.first-section-text p {
+  width: 200px;
+  color: white;
+}
+
+.first-section-text button {
+  width: 150px;
+  height: 34px;
+  border-radius: 15px;
+  border: none;
+  background-color: #f4ce14;
+  font-weight: 700;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.first-section-text button:hover {
+  background-color: #000;
+  color: #f4ce14;
+}
+
+.first-section-img {
+  width: 380px;
+  height: 420px;
+  border-radius: 15px;
+  position: absolute;
+  background-image: url(../src/assets/restauranfood.jpg);
+  background-size: cover;
+  top: 20px;
+  right: 181px;
+}
+
+.second-section {
+  margin-top: 180px;
+  padding-right: 181px;
+  padding-left: 212px;
+}
+
+.second-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.second-title button {
+  width: 150px;
+  height: 34px;
+  border-radius: 15px;
+  border: none;
+  background-color: #f4ce14;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.second-title button:hover {
+  background-color: #000;
+  color: #f4ce14;
+}
+
+.specials {
+  min-height: 460px;
+  display: grid;
+  column-gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sec-img {
+  background-color: #f4ce14;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 200px;
+}
+
+.sec-img1 {
+  background-image: url(./assets/greek-salad.jpg);
+  background-size: cover;
+}
+.sec-img2 {
+  background-image: url(./assets/bruchetta.svg);
+  background-size: cover;
+}
+
+.sec-img3 {
+  background-image: url(./assets/lemon-dessert.jpg);
+  background-size: cover;
+}
+
+.text-block {
+  background-color: #edefee;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+  margin-bottom: 48px;
+}
+
+.special-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-header div {
+  text-align: center;
+  font-weight: 600;
+  color: #ee9972;
+}
+
+.special-header div p {
+  text-align: center;
+}
+
+.special-header h3 {
+  font-size: 16px;
+}
+
+.special-footer {
+  display: flex;
+  gap: 8px;
+}
+
+.special-footer div {
+  cursor: pointer;
+}
+
+.special-footer div:hover {
+  color: #f4ce14;
+}
+
+.special-footer img {
+  width: 20px;
+  height: 20px;
+}
+
+.special-body {
+ height: 180px; 
+}
+
+.third-section {
+    background: #495e57;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.third-section-block {
+  padding-right: 181px;
+  padding-left: 212px;
+}
+
+.third-section h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 54px;
+  margin-top: 0;
+}
+
+.review {
+  background-color: #edefee;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 15px;
+  padding: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.reviews {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.rating {
+  color: #bca326;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.reviewer {
+  display: flex;
+  gap: 8px;
+}
+
+.reviewer div {
+  width: 60px;
+  height: 60px;
+  background-image: url(../src/assets/sara.jpg);
+  background-size: cover;
+  border-radius: 60px;
+}
+
+.review-text {
+  font-size: 12px;
+}
+
+.forth-section {
+  margin-top: 80px;
+  padding-right: 181px;
+  padding-left: 212px;
+  position: relative;
+  height: 400px;
+  margin-bottom: 80px;
+}
+
+.forth-section h1 {
+  margin-bottom: 8px;
+  font-size: 40px;
+}
+
+.forth-section h3 {
+  margin-top: 0;
+}
+
+.forth-section p {
+  width: 400px;
+}
+
+.forth-image {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+}
+
+.image1 {
+  bottom: 40px;
+  right: 281px;
+}
+
+.image2 {
+  bottom: 130px;
+  right: 181px;
+}
+
+.footer {
+  height: 400px;
+  background-color: #000;
+  padding-right: 181px;
+  padding-left: 212px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #fff;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: auto;
+}
+
+.footer-logo p:hover {
+  color: #bdbdbd;
+  cursor: pointer;
+}
+  
+.footer-links {
+  list-style-type: none;
+  color: #fff;
+}
+
+.footer-links li {
+  cursor: pointer;
+}
+
+.footer li:hover {
+  color: #bdbdbd;
+}
+
+
+
+@media(min-width: 1390px) {
+  .header {
+    margin-left: 272px;
+    margin-right: 241px;
+  }
+
+  .first-section-block {
+    padding-right: 241px;
+    padding-left: 272px;
+  }
+
+  .second-section {
+    padding-right: 241px;
+    padding-left: 272px;
+  }
+
+  .third-section-block {
+    padding-right: 241px;
+    padding-left: 272px;
+  }
+
+
+  .forth-section {
+    padding-right: 241px;
+    padding-left: 272px;
+  }
+
+  .footer {
+    padding-right: 241px;
+    padding-left: 272px;
+  }
+
+}
+
+@media(max-width: 1100px) {
+  .forth-section p {
+    width: 300px;
+  }
+  
+  .forth-image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+
+  .nav-list {
+    gap: 14px;
+  }
+}
+
+@media(max-width: 1040px) {
+  .nav-list {
+    font-size: 14px;
+  }
+
+  .header {
+    margin-left: 172px;
+    margin-right: 141px;
+  }
+
+  .first-section-block {
+    padding-right: 141px;
+    padding-left: 172px;
+  }
+
+  .second-section {
+    padding-right: 141px;
+    padding-left: 172px;
+  }
+
+  .third-section-block {
+    padding-right: 141px;
+    padding-left: 172px;
+  }
+
+
+  .forth-section {
+    padding-right: 141px;
+    padding-left: 172px;
+  }
+
+  .image2 {
+    right: 141px;
+  }
+
+  .image1 {
+    right: 241px;
+  }
+
+  .footer {
+    padding-right: 141px;
+    padding-left: 172px;
+  }
+
+  .first-section-img {
+    right: 141px;
+  }
+
+  .specials {
+    min-height: 360px;
+    column-gap: 18px;
+  }
+}
+
+@media(max-width: 1000px) {
+  .first-section-img {
+    width: 300px;
+    height: 340px;
+  }
+
+  .second-section {
+    margin-top: 100px;
+  }
+
+
+}
+
+@media(max-width: 960px) {
+ 
+ .header {
+  margin-left: 72px;
+  margin-right: 41px;
+}
+
+.first-section-block {
+  padding-right: 41px;
+  padding-left: 72px;
+}
+
+.first-section-img {
+  right: 41px;
+}
+
+.second-section {
+  padding-right: 41px;
+  padding-left: 72px;
+}
+
+.third-section-block {
+  padding-right: 41px;
+  padding-left: 72px;
+}
+
+
+.forth-section {
+  padding-right: 41px;
+  padding-left: 72px;
+}
+
+.image2 {
+  right: 41px;
+}
+
+.image1 {
+  right: 141px;
+}
+
+.footer {
+  padding-right: 41px;
+  padding-left: 72px;
+}
+}
+
+@media(max-width: 700px) {
+  .header {
+    margin-left: 52px;
+    margin-right: 21px;
+  }
+  
+  .first-section-block {
+    padding-right: 21px;
+    padding-left: 52px;
+  }
+  
+  .first-section-img {
+    right: 21px;
+  }
+  
+  .second-section {
+    padding-right: 21px;
+    padding-left: 52px;
+  }
+  
+  .third-section-block {
+    padding-right: 21px;
+    padding-left: 52px;
+  }
+  
+  .forth-section {
+    padding-right: 21px;
+    padding-left: 52px;
+  }
+  
+  .image2 {
+    right: 21px;
+  }
+  
+  .image1 {
+    right: 121px;
+  }
+
+  .forth-section p {
+    width: 200px;
+  }
+  
+  .footer {
+    padding-right: 21px;
+    padding-left: 52px;
+  }
+}
+
+@media(max-width: 640px) {
+
+  .header {
+    margin-left: 21px;
+    margin-right: 21px;
+  }
+  
+  .first-section-block {
+    padding-right: 21px;
+    padding-left: 21px;
+  }
+
+  .second-section {
+    padding-right: 21px;
+    padding-left: 21px;
+  }
+  
+  .third-section-block {
+    padding-right: 21px;
+    padding-left: 21px;
+  }
+  
+  .forth-section {
+    padding-right: 21px;
+    padding-left: 21px;
+  }
+  
+  .footer {
+    padding-right: 21px;
+    padding-left: 21px;
+    font-size: 14px;
+  }
+
+
+  .nav-icons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .first-section-img {
+    display: none;
+  }
+
+  .first-section-block {
+    justify-content: center;
+  }
+
+  .first-section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first-section-text h1 {
+    text-align: center;
+  }
+
+  .first-section-text h3 {
+    text-align: center;
+  }
+
+  .first-section-block p {
+    text-align: center;
+  }
+
+  .second-section {
+    margin-top: 40px;
+  }
+
+  .specials {
+    column-gap: 24px;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0px;
+    margin-top: 24px;
+  }
+
+  .special {
+    width: 300px;
+    margin: auto;
+  }
+
+  .forth-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    
+  }
+  
+  .forth-section h1 {
+    margin-bottom: 8px;
+    font-size: 40px;
+  }
+  
+  .forth-section h3 {
+    margin-top: 0;
+  }
+  
+  .forth-section p {
+    width: 400px;
+  }
+  
+  .forth-image {
+    display: none;
+  }
+
+}
+
+@media(max-width: 500px) {
+  .header{
+    display: grid;
+    margin-top: 24px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .header img {
+    margin: auto;
+  }
+
+  .second-title h1 {
+    font-size: 20px;
+  }
+}
+
+
