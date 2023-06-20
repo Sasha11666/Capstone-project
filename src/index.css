@@ -554,6 +554,10 @@ form button:hover {
   }
 }
 
+.highlighted {
+  border: 2px solid red;
+}
+
 @media (max-width: 1000px) {
   .first-section-img {
     width: 300px;
