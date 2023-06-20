@@ -19,6 +19,14 @@ export const reducer = (state, date) => {
   return state;
 };
 
+export const highltghtField = (field, id) => {
+  if (!field) {
+    document.getElementById(`${id}`).classList.add("highlighted");
+  } else {
+    document.getElementById(`${id}`).classList.remove("highlighted");
+  }
+};
+
 function Form() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -30,22 +38,32 @@ function Form() {
   const [state, dispatch] = useReducer(reducer, initializeTimes());
   const history = useHistory();
 
-  useEffect(() => {
-    if (
-      document.querySelector(".submit-button") &&
-      (!name || !number || !date || !selected || !guests || !occasion)
-    ) {
-      document.querySelector(".submit-button").setAttribute("disabled", "");
-      document.querySelector(".submit-button").classList.add("disabled");
-    } else {
-      document.querySelector(".submit-button").removeAttribute("disabled");
-      document.querySelector(".submit-button").classList.remove("disabled");
+  const disableSubmit = () => {
+    if (document.querySelector(".submit-button")) {
+      if (!name || !number || !date || !occasion || !selected || !guests) {
+        document.querySelector(".submit-button").setAttribute("disabled", "");
+        document.querySelector(".submit-button").classList.add("disabled");
+      } else {
+        document.querySelector(".submit-button").removeAttribute("disabled");
+        document.querySelector(".submit-button").classList.remove("disabled");
+      }
     }
-  }, [name, number, date, selected, guests, occasion]);
+  };
+
+  // const highltghtField = (field, id) => {
+  //   if (!field) {
+  //     document.getElementById(`${id}`).classList.add("highlighted");
+  //   } else {
+  //     document.getElementById(`${id}`).classList.remove("highlighted");
+  //   }
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push("/confirm");
+    if (name && number && date && selected && guests && occasion) {
+      history.push("/confirm");
+    }
+
     setName("");
     setNumber("");
     setDate("");
@@ -63,7 +81,16 @@ function Form() {
           type="text"
           name="name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          data-testid="input-name"
+          onBlur={(e) => {
+            highltghtField(e.target.value, "input-name");
+            disableSubmit();
+          }}
+          onChange={(e) => {
+            setName(e.target.value);
+            disableSubmit();
+            highltghtField(e.target.value, "input-name");
+          }}
         />
         <br></br>
         <label htmlFor="input-number">Your telephone number</label>
@@ -72,7 +99,15 @@ function Form() {
           type="tel"
           name="number"
           value={number}
-          onChange={(e) => setNumber(e.target.value)}
+          onBlur={(e) => {
+            highltghtField(e.target.value, "input-number");
+            disableSubmit();
+          }}
+          onChange={(e) => {
+            setNumber(e.target.value);
+            highltghtField(e.target.value, "input-number");
+            disableSubmit();
+          }}
         />
         <br></br>
         <label htmlFor="input-date">Choose date</label>
@@ -80,9 +115,15 @@ function Form() {
           type="date"
           id="input-date"
           value={date}
+          onBlur={(e) => {
+            highltghtField(e.target.value, "input-date");
+            disableSubmit();
+          }}
           onChange={(e) => {
             setDate(e.target.value);
             dispatch(e.target.value);
+            highltghtField(e.target.value, "input-date");
+            disableSubmit();
           }}
         />
         <br></br>
@@ -90,7 +131,15 @@ function Form() {
         <select
           id="input-time"
           value={selected}
-          onChange={(e) => setSelected(e.target.value)}
+          onBlur={(e) => {
+            highltghtField(e.target.value, "input-time");
+            disableSubmit();
+          }}
+          onChange={(e) => {
+            setSelected(e.target.value);
+            highltghtField(e.target.value, "input-time");
+            disableSubmit();
+          }}
         >
           {state &&
             state.map((time) => (
@@ -105,15 +154,33 @@ function Form() {
           id="input-guests"
           type="number"
           name="number"
+          data-testid="guests"
           value={guests}
-          onChange={(e) => setGuests(e.target.value)}
+          min={1}
+          onBlur={(e) => {
+            highltghtField(e.target.value, "input-guests");
+            disableSubmit();
+          }}
+          onChange={(e) => {
+            setGuests(e.target.value);
+            highltghtField(e.target.value, "input-guests");
+            disableSubmit();
+          }}
         />
         <br></br>
         <label htmlFor="input-occasion">Choose occasion</label>
         <select
           id="input-occasion"
           value={occasion}
-          onChange={(e) => setOccasion(e.target.value)}
+          onBlur={(e) => {
+            highltghtField(e.target.value, "input-occasion");
+            disableSubmit();
+          }}
+          onChange={(e) => {
+            setOccasion(e.target.value);
+            highltghtField(e.target.value, "input-occasion");
+            disableSubmit();
+          }}
         >
           <option>Birthday</option>
           <option>Engagement</option>
