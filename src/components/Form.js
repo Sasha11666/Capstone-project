@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from "react";
+import { useState, useReducer } from "react";
 import { fetchAPI, submitAPI } from "./Api";
 import { useHistory } from "react-router-dom";
 
@@ -189,7 +189,7 @@ function Form() {
         </select>
         <br></br>
 
-        <button className="submit-button" type="submit">
+        <button aria-label="On Click" className="submit-button" type="submit">
           Submit
         </button>
       </form>

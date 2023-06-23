@@ -14,22 +14,28 @@ const Navbar = () => {
       <nav>
         <ul className="nav-list">
           <li>
-            <Link to="/">Home</Link>
+            <Link aria-label="To Home" to="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link aria-label="To About" to="/about">
+              About
+            </Link>
           </li>
           <li>
-            <a>Menu</a>
+            <Link to="#">Menu</Link>
           </li>
           <li>
-            <Link to="/booking">Booking</Link>
+            <Link aria-label="To Booking" to="/booking">
+              Booking
+            </Link>
           </li>
           <li>
-            <a>Order online</a>
+            <Link to="#">Order online</Link>
           </li>
           <li>
-            <a>Login</a>
+            <Link to="#">Login</Link>
           </li>
         </ul>
         <div className="nav-icons">
